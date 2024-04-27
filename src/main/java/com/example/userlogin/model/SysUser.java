@@ -18,9 +18,7 @@ public class SysUser {
     private String password;
 
     /**
-     * 权限 比如ROLE_admin,ROLE_normal,sys:user:list,... 测试是使用
-     * 正式需使用RBAC模型
-     *
+     * 权限字段
      */
     private String authority;
 

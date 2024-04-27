@@ -6,6 +6,7 @@ import com.example.userlogin.model.SysUser;
 import com.example.userlogin.handler.password.PasswordEncoder;
 import com.example.userlogin.service.UserService;
 import com.example.userlogin.utils.RSAUtils;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -32,6 +33,7 @@ public class UserController {
 
 
     @PostMapping("/register")
+    @ApiOperation("用户注册")
     public Result register(@RequestBody SysUser sysUser){
         ReentrantLock lock = new ReentrantLock();
         lock.lock();

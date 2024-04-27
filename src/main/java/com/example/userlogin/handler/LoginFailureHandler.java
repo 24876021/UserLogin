@@ -30,8 +30,10 @@ public class LoginFailureHandler implements AuthenticationFailureHandler {
         if (e instanceof CaptchaException) {
             errorMessage = "验证码错误";
             result = Result.fail(errorMessage);
+            httpServletResponse.setStatus(301);
         } else {
             result = Result.fail(errorMessage);
+            httpServletResponse.setStatus(301);
         }
         outputStream.write(JSONUtil.toJsonStr(result).getBytes(StandardCharsets.UTF_8));
         outputStream.flush();

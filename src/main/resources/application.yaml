@@ -1,5 +1,6 @@
 server:
  port: 8082
+ #address: 192.168.93.11
 
 spring:
  datasource:
@@ -25,7 +26,7 @@ spring:
 shuangtian:
  jwt:
   header: Authorization
-  expire: 604800 # 7天，s为单位 此处过去设置的是hash 顶部的key，应该设置成功 hash里面map 的key。可以自己实现。存的时候带入时间，取的时候判断事件是否超时
+  expire: 604800 # 7天，s为单位
   secret: abcdefghabcdefghabcdefghabcdefgh
 
 

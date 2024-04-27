@@ -18,9 +18,9 @@ import java.nio.charset.StandardCharsets;
 
 /**
  * 登出处理器
- *在用户退出登录时，我们需将原来的JWT置为空返给前端，这样前端会将空字符串覆盖之前的jwt，以便清除浏览器保存的JWT(因为JWT只有过期才会失效)。
+ *在用户退出登录时，需将原来的JWT置为空返给前端，这样前端会将空字符串覆盖之前的jwt，以便清除浏览器保存的JWT(因为JWT只有过期才会失效)。
  *还要通过创建SecurityContextLogoutHandler对象，调用它的logout方法将我们之前置入SecurityContext中的用户信息进行清除
- *我们定义LogoutSuccessHandler接口的实现类JWTLogoutSuccessHandler，重写其onLogoutSuccess方法
+ *定义LogoutSuccessHandler接口的实现类JWTLogoutSuccessHandler，重写其onLogoutSuccess方法
  * springSecurity 管理地址：/logout
  */
 @Component
